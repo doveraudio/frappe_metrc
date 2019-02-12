@@ -30,7 +30,7 @@ class Room(Document):
 			# Create Room in Metrc and assign ID
 			room_doc = frappe.new_doc("Room")
 			#room_doc.room_id = plant.get("RoomId")
-			room_doc.room_name = data[0].Name
+			room_doc.room_name = self.room_name
 			room_doc.save()
 			frappe.db.commit()
 			#metrc.post("/rooms/v1/create", data)
